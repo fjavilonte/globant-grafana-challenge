@@ -16,6 +16,11 @@ $ npm install
 $ npm start
 ```
 
+To run the test files use the following command:
+
+```
+$ npm run test
+```
 Create .env file and copy paste "REACT_APP_FAKE_SERVER_URL='http://localhost:8000'"
 
 ## Libraries used
