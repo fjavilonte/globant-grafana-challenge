@@ -1,5 +1,5 @@
 import {render,screen, fireEvent, getByRole} from '@testing-library/react'    
-import Alarm from './Alar'
+import AlarmList from './AlarmList'
 
 /* test('It will check if alarm is paused or active', () => {
 
@@ -16,7 +16,7 @@ test('Should search the status', () => {
     )
     const status = screen.getByLabelText('Status')
     
-    fireEvent.change(getByRole('Button'), { target: { paused: true } });
+    fireEvent.change(getByRole('Alarm'), { target: { paused: true } });
 
     screen.debug()
 })
