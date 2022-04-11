@@ -1,5 +1,6 @@
-import {render,screen, fireEvent, getByRole} from '@testing-library/react'    
-import AlarmList from './AlarmList'
+import { useFormControl } from '@mui/material'
+import {render,screen, fireEvent, getByRole, act} from '@testing-library/react'    
+import isLoading from './AlarmList'
 
 /* test('It will check if alarm is paused or active', () => {
 
@@ -10,13 +11,12 @@ import AlarmList from './AlarmList'
     expect(status).toBeInTheDocument()
     expect(statusElement).toBeInTheDocument()
 }) */
-
+//Usint renderHook to test if the modal is loading, still doesnt work
 test('Should search the status', () => {
-    render(<Alarm />
-    )
-    const status = screen.getByLabelText('Status')
-    
-    fireEvent.change(getByRole('Alarm'), { target: { paused: true } });
-
-    screen.debug()
+   
+    const status = renderHook(()=> isLoading())
+    act(()=>{
+        status.true
+    })
+    expect(status).toBe(true)
 })
