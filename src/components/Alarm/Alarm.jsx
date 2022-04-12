@@ -66,6 +66,7 @@ const Alarm = ({
           color='warning'
           sx={styledButton}
           onClick={() => handlePause(id)}
+          data-testid="isActive"
         >
           {!paused ? 'Pause' : 'Resume'}
         </Button>

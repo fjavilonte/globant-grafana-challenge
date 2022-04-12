@@ -1,5 +1,5 @@
 import {render,screen, fireEvent, getByRole} from '@testing-library/react'    
-import Alarm from './Alar'
+import Alarm from './Alarm'
 
 /* test('It will check if alarm is paused or active', () => {
 
@@ -11,12 +11,12 @@ import Alarm from './Alar'
     expect(statusElement).toBeInTheDocument()
 }) */
 
-test('Should search the status', () => {
-    render(<Alarm />
-    )
-    const status = screen.getByLabelText('Status')
-    
-    fireEvent.change(getByRole('Button'), { target: { paused: true } });
 
-    screen.debug()
+
+test("The button's text shows properly", ()=> {
+    const {getByTestId} = render(<Alarm />)
+    const buttonEl = getByTestId("isActive")
+
+    expect(buttonEl.textContent).toBe("Pause" || "Resume")
+    
 })
