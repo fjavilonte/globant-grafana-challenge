@@ -15,7 +15,7 @@ test("The button's text shows properly", ()=> {
     const {getByTestId} = render(<Alarm />)
     const buttonEl = getByTestId("isActive")
 
-    expect(buttonEl.textContent).toBe("Pause" || "Resume")
+    expect(buttonEl.textContent).toBe("Pause" || "Resume" || "Firing")
     
 })
 
@@ -26,13 +26,7 @@ test("The button's text shows properly", ()=> {
     expect(buttonEl.textContent).toBe("Edit")
     
 })
-test("The button's text shows properly", ()=> {
-    const {getByTestId} = render(<Alarm />)
-    const buttonEl = getByTestId("firingbutton")
 
-    expect(buttonEl.textContent).toBe("Firing")
-    
-})
 test("The button's text shows properly", ()=> {
     const {getByTestId} = render(<Alarm />)
     const buttonEl = getByTestId("editbutton")

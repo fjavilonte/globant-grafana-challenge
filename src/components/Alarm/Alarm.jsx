@@ -49,17 +49,19 @@ const Alarm = ({
         variant='outlined'
         color='error'
         sx={styledButton}
-        onClick={() => handleDelete(id)}
         data-testid="deletebutton"
+        onClick={() => handleDelete(id)}
+        
       >
         Delete
       </Button>
       {firing ? (
         <Button
+          data-testid="firingbutton"
           variant='contained'
           color='error'
           sx={styledButton}
-          data-testid="firingbutton"
+          
         >
           Firing
         </Button>
