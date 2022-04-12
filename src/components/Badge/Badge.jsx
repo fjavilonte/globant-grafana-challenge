@@ -17,7 +17,7 @@ const styledBadge = {
 
 const Badge = ({ count }) => (
   <Box sx={styledBadge} component='span'>
-    <Typography variant='subtitle1' fontWeight='bold'>
+    <Typography variant='subtitle1' fontWeight='bold' data-testid="counter">
       {count}
     </Typography>
   </Box>
