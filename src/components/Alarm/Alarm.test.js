@@ -41,3 +41,18 @@ test("The button's text shows properly", ()=> {
     expect(buttonEl.textContent).toBe("Delete")
     
 })
+
+
+test("The button's text shows properly", ()=> {
+    const {getByTestId} = render(<Alarm />)
+    const buttonEl = getByTestId("isActive")
+
+    fireEvent.change(buttonEl,{
+        target: {
+            value: "Resume"
+        }
+    });
+
+    expect(buttonEl.value).toBe("Resume")
+    
+})
