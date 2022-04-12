@@ -11,12 +11,39 @@ import Alarm from './Alarm'
     expect(statusElement).toBeInTheDocument()
 }) */
 
-
-
 test("The button's text shows properly", ()=> {
     const {getByTestId} = render(<Alarm />)
     const buttonEl = getByTestId("isActive")
 
     expect(buttonEl.textContent).toBe("Pause" || "Resume")
+    
+})
+
+test("The button's text shows properly", ()=> {
+    const {getByTestId} = render(<Alarm />)
+    const buttonEl = getByTestId("editbutton")
+
+    expect(buttonEl.textContent).toBe("Edit")
+    
+})
+test("The button's text shows properly", ()=> {
+    const {getByTestId} = render(<Alarm />)
+    const buttonEl = getByTestId("firingbutton")
+
+    expect(buttonEl.textContent).toBe("Firing")
+    
+})
+test("The button's text shows properly", ()=> {
+    const {getByTestId} = render(<Alarm />)
+    const buttonEl = getByTestId("editbutton")
+
+    expect(buttonEl.textContent).toBe("Edit")
+    
+})
+test("The button's text shows properly", ()=> {
+    const {getByTestId} = render(<Alarm />)
+    const buttonEl = getByTestId("deletebutton")
+
+    expect(buttonEl.textContent).toBe("Delete")
     
 })

@@ -41,6 +41,7 @@ const Alarm = ({
         color='primary'
         sx={styledButton}
         onClick={() => handleEdit(id)}
+        data-testid="editbutton"
       >
         Edit
       </Button>
@@ -49,6 +50,7 @@ const Alarm = ({
         color='error'
         sx={styledButton}
         onClick={() => handleDelete(id)}
+        data-testid="deletebutton"
       >
         Delete
       </Button>
@@ -57,6 +59,7 @@ const Alarm = ({
           variant='contained'
           color='error'
           sx={styledButton}
+          data-testid="firingbutton"
         >
           Firing
         </Button>
