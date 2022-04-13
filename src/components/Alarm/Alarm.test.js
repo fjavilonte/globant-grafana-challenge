@@ -11,6 +11,7 @@ import Alarm from './Alarm'
     expect(statusElement).toBeInTheDocument()
 }) */
 
+
 test("The button's text shows properly", ()=> {
     const {getByTestId} = render(<Alarm />)
     const buttonEl = getByTestId("isActive")

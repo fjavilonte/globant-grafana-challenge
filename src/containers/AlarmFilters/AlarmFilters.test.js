@@ -1,4 +1,4 @@
-import AlarmFilters from './AlarmFilters'
+/* import AlarmFilters from './AlarmFilters'
 import {render} from '@testing-library/react'
 
 test('renders content', () => {
@@ -14,4 +14,4 @@ test('renders content', () => {
     }
 
    
-)
+) */
