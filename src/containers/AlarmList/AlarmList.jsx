@@ -158,7 +158,7 @@ const AlarmList = () => {
         <Loader />
       ) : (
         <Box component='section'>
-          <List>
+          <List data-testid="content">
             {state.alarms.map(({ _id, ...rest }, idx) => (
               <Alarm
                 key={idx}

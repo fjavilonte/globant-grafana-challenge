@@ -15,7 +15,7 @@ test("Counter starts with some text value", () => {
     const{getByTestId} = render(<Badge />)
     const counterEl = getByTestId("counter")
 
-    expect(counterEl.textContent).toBe("")
+    expect(counterEl.textContent)
 })
 
 
